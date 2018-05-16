@@ -50,5 +50,8 @@ mvn compiler:help -Ddetail=true -Dgoal=compile
 ```
 
 ```
-Passing 
+Building custom plugins
+  Below command will generate project to create custom plugin
+mvn archetype:create -DgroupId= -DartifactId= -DarchetypeArtifactId=maven-archetype-mojo -DarchetypeGroupId=org.apache.maven.archetypes
+
 ```
