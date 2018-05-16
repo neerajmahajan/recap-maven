@@ -1,11 +1,12 @@
 # refreshing-maven
 
 ```
-mvn help:effective-pom
+Seeing the content of parent pom along with child pom
+--- mvn help:effective-pom
 ```
 
 ```
-Running a Plugin and it's goal
+Manually running a Plugin and it's goal
 
-eg mvn compiler:compile
+--- mvn compiler:compile
 ```
