@@ -1,6 +1,10 @@
 # refreshing-maven
 
 ```
+USe tcf terminal plugin in eclipse to use command line terminal and execute maven jobs.
+```
+
+```
 Seeing the content of parent pom along with child pom
   - mvn help:effective-pom
 ```
