@@ -78,6 +78,16 @@ Profiles
 ```
 
 ```
+	Archetype Plugin -- use to create project template from exisiting templates
+	
+	mvn archetype:generate -- here archetype is the plugin and generate is the action
+	
+	or
+	
+	mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.3
+```
+
+```
 Manually running a Plugin and it's goal
 
   - mvn compiler:compile
