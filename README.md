@@ -89,7 +89,7 @@ mvn dependency:copy-dependencies
 
 Above command will copy all the dependencies specified in pom.xml in target/dependency folder and local .m2 repo
 
-*Transitive Dependency
+* Transitive Dependency
 	 A -> B -> C
 	 
 A depends on B and B depends on C , so B & C are transitive dependencies for A
