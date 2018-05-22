@@ -40,6 +40,44 @@ eg
 ```
 
 ```
+Profiles
+
+  <profiles>
+		<profile>
+      <id>production_id</id>
+      <build>
+      	<directory>production</directory>
+      </build>
+    </profile>
+    
+    
+    mvn -Pproduction_id package  --- runnuing through command line
+    
+    
+    other way through activation
+    
+    <profiles>
+		<profile>
+      <id>production</id>
+      <activation>
+      	<!-- Use any of the below activation types -->
+      	<!-->activeByDefault></activeByDefault -->
+      	<!--file></file-->
+      	<!--jdk></jdk-->
+      	<!--os></os-->
+      	<property>
+      		<name>env.JAVA_HOME</name>
+      		<value>/opt/java</value>
+      	</property>
+      </activation>
+      <build>
+      	<directory>production</directory>
+      </build>
+    </profile>
+
+```
+
+```
 Manually running a Plugin and it's goal
 
   - mvn compiler:compile
