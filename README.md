@@ -88,6 +88,16 @@ Profiles
 ```
 
 ```
+		Dependency Management
+	
+search.maven.org - search engine to search artefacts
+
+mvn dependency:copy-dependencies
+
+Above command will copy all the dependencies specified in pom.xml in target/dependency folder and local .m2 repo
+```
+
+```
 Manually running a Plugin and it's goal
 
   - mvn compiler:compile
