@@ -98,8 +98,50 @@ Above command will copy all the dependencies specified in pom.xml in target/depe
 ```
 
 ```
-Manually running a Plugin and it's goal
+Remote repositories - collection of dependencies and plugins
+configure in settings.xml
+-- Create a profile
 
+<profiles>
+ <profile>
+      <id>production</id>
+      <repositories>
+      	<repository>
+      		<id>spring_repo</id>
+      		<url>http://repo.spring.io.release</url>
+      	</repository>
+      </repositories>
+ </profile>
+</profiles>
+  
+  <activeProfiles>
+  <activeProfile>production</activeProfile>
+  </activeProfiles>
+```
+
+```
+	Dependency Scope
+	
+	1 compile (default)
+	2 test
+	3 provided (will be provided eg by JDK - Dependency will be available at build time, but would be provided at run time)
+	4 runtime (Specify a dependency is needed at run time, but not required at build time)
+	5 import (Not used often)
+	6 system (Not recommended. locate the dependency from the machine path)
+	
+<dependencies>
+    <dependency>
+      <groupId>group-c</groupId>
+      <artifactId>artifact-b</artifactId>
+      <version>1.0</version>
+      <type>war</type>
+      <scope>runtime</scope>
+    </dependency>
+ <dependencies>
+```
+```
+Manually running a Plugin and it's goal
+  - mvn -X (flag for debug information)
   - mvn compiler:compile
 ```
 
