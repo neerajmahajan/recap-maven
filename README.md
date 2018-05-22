@@ -10,6 +10,36 @@ Seeing the content of parent pom along with child pom
 ```
 
 ```
+Standard Maven directory structure
+
+https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
+
+src/main/java
+    --- java source code
+    
+src/main/resources
+    --- configuration files like log4j.xml,.properties, etc
+    
+src/test/java
+    --- jnuit test classess
+    
+src/test/resources
+    --- test resources
+    
+To override these standard locations
+
+update build tag in pom
+
+eg 
+
+<build>
+  <sourceDirectory>src/nonstandard/java</sourceDirectory>
+  <target>myTarget</target>
+</build>
+
+```
+
+```
 Manually running a Plugin and it's goal
 
   - mvn compiler:compile
