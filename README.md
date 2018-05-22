@@ -1,5 +1,4 @@
-# refreshing-maven
-
+# Using Terminal from eclipse
 ```
 USe tcf terminal plugin in eclipse to use command line terminal and execute maven jobs.
 ```
@@ -9,9 +8,9 @@ Seeing the content of parent pom along with child pom
   - mvn help:effective-pom
 ```
 
-```
-Standard Maven directory structure
 
+# Standard Maven directory structure
+```
 https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
 
 src/main/java
@@ -38,10 +37,8 @@ eg
 </build>
 
 ```
-
+# Profiles
 ```
-Profiles
-
   <profiles>
 		<profile>
       <id>production_id</id>
@@ -76,27 +73,23 @@ Profiles
     </profile>
 
 ```
-
+# Archetype Plugin -- use to create project template from exisiting templates
 ```
-	Archetype Plugin -- use to create project template from exisiting templates
-	
 	mvn archetype:generate -- here archetype is the plugin and generate is the action
 	
 	or
 	
 	mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.3
 ```
-
+# Dependency Management
 ```
-		Dependency Management
-	
 search.maven.org - search engine to search artefacts
 
 mvn dependency:copy-dependencies
 
 Above command will copy all the dependencies specified in pom.xml in target/dependency folder and local .m2 repo
 
-Transitive Dependency
+*Transitive Dependency
 	 A -> B -> C
 	 
 A depends on B and B depends on C , so B & C are transitive dependencies for A
@@ -119,9 +112,8 @@ A depends on B and B depends on C , so B & C are transitive dependencies for A
  Note: In case of conflict, maven will use the latest version of transitive dependency.
 	
 ```
-
+#  Remote repositories - collection of dependencies and plugins
 ```
-Remote repositories - collection of dependencies and plugins
 configure in settings.xml
 -- Create a profile
 
@@ -141,10 +133,8 @@ configure in settings.xml
   <activeProfile>production</activeProfile>
   </activeProfiles>
 ```
-
+# Dependency Scope
 ```
-	Dependency Scope
-	
 	1 compile (default)
 	2 test
 	3 provided (will be provided eg by JDK - Dependency will be available at build time, but would be provided at run time)
@@ -162,8 +152,8 @@ configure in settings.xml
     </dependency>
  <dependencies>
 ```
+# Manually running a Plugin and it's goal
 ```
-Manually running a Plugin and it's goal
   - mvn -X (flag for debug information)
   - mvn compiler:compile
 ```
