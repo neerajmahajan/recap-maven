@@ -34,7 +34,7 @@ eg
 
 <build>
   <sourceDirectory>src/nonstandard/java</sourceDirectory>
-  <target>myTarget</target>
+  <directory>myTarget</directory>
 </build>
 
 ```
