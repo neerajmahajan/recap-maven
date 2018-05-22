@@ -95,6 +95,27 @@ search.maven.org - search engine to search artefacts
 mvn dependency:copy-dependencies
 
 Above command will copy all the dependencies specified in pom.xml in target/dependency folder and local .m2 repo
+
+Transitive Dependency
+	 A -> B -> C
+	 
+A depends on B and B depends on C , so B & C are transitive dependencies for A
+	How to resolve transitive dependency conflict when multiple dependencies pull same transiticvve dependecies, but differenct version
+	
+<dependencies>
+    <dependency>
+      <groupId>group-a</groupId>
+      <artifactId>artifact-a</artifactId>
+      <version>1.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>group-c</groupId>
+          <artifactId>excluded-artifact</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+ </dependencies>
+	
 ```
 
 ```
