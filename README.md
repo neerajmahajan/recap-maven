@@ -115,6 +115,8 @@ A depends on B and B depends on C , so B & C are transitive dependencies for A
       </exclusions>
     </dependency>
  </dependencies>
+ 
+ Note: In case of conflict, maven will use the latest version of transitive dependency.
 	
 ```
 
